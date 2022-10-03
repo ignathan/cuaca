@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A8A754828EAFA2400172CF8 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A754728EAFA2400172CF8 /* ErrorResponse.swift */; };
 		4AE0E2D828EA87F3007A991C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E2D728EA87F3007A991C /* AppDelegate.swift */; };
 		4AE0E2DA28EA87F3007A991C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E2D928EA87F3007A991C /* SceneDelegate.swift */; };
 		4AE0E2DC28EA87F3007A991C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E2DB28EA87F3007A991C /* HomeViewController.swift */; };
@@ -14,9 +15,15 @@
 		4AE0E2E428EA87F7007A991C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE0E2E228EA87F7007A991C /* LaunchScreen.storyboard */; };
 		4AE0E2F028EAC05E007A991C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4AE0E2EF28EAC05E007A991C /* Alamofire */; };
 		4AE0E2F328EAC4FF007A991C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E2F228EAC4FF007A991C /* UIColor+Extensions.swift */; };
+		4AE0E2FB28EAD2F4007A991C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E2FA28EAD2F4007A991C /* NetworkService.swift */; };
+		4AE0E2FE28EAD729007A991C /* CurrentWeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E2FD28EAD729007A991C /* CurrentWeatherResponse.swift */; };
+		4AE0E30028EAD731007A991C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E2FF28EAD731007A991C /* Location.swift */; };
+		4AE0E30428EADD8D007A991C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E30328EADD8D007A991C /* HomePresenter.swift */; };
+		4AE0E30628EADD99007A991C /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E30528EADD99007A991C /* HomeInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A8A754728EAFA2400172CF8 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		4AE0E2D428EA87F3007A991C /* Cuaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cuaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE0E2D728EA87F3007A991C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AE0E2D928EA87F3007A991C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,6 +32,11 @@
 		4AE0E2E328EA87F7007A991C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AE0E2E528EA87F7007A991C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AE0E2F228EAC4FF007A991C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		4AE0E2FA28EAD2F4007A991C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		4AE0E2FD28EAD729007A991C /* CurrentWeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherResponse.swift; sourceTree = "<group>"; };
+		4AE0E2FF28EAD731007A991C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		4AE0E30328EADD8D007A991C /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		4AE0E30528EADD99007A991C /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +72,12 @@
 			children = (
 				4AE0E2E528EA87F7007A991C /* Info.plist */,
 				4AE0E2D728EA87F3007A991C /* AppDelegate.swift */,
-				4AE0E2DB28EA87F3007A991C /* HomeViewController.swift */,
+				4AE0E2FA28EAD2F4007A991C /* NetworkService.swift */,
 				4AE0E2D928EA87F3007A991C /* SceneDelegate.swift */,
 				4AE0E2E028EA87F7007A991C /* Assets.xcassets */,
 				4AE0E2E228EA87F7007A991C /* LaunchScreen.storyboard */,
+				4AE0E2FC28EAD70E007A991C /* Model */,
+				4AE0E30128EADD43007A991C /* Scene */,
 				4AE0E2F128EAC4E6007A991C /* Utility */,
 			);
 			path = Cuaca;
@@ -75,6 +89,34 @@
 				4AE0E2F228EAC4FF007A991C /* UIColor+Extensions.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		4AE0E2FC28EAD70E007A991C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4AE0E2FD28EAD729007A991C /* CurrentWeatherResponse.swift */,
+				4AE0E2FF28EAD731007A991C /* Location.swift */,
+				4A8A754728EAFA2400172CF8 /* ErrorResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4AE0E30128EADD43007A991C /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				4AE0E30228EADD48007A991C /* Home */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		4AE0E30228EADD48007A991C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4AE0E2DB28EA87F3007A991C /* HomeViewController.swift */,
+				4AE0E30328EADD8D007A991C /* HomePresenter.swift */,
+				4AE0E30528EADD99007A991C /* HomeInteractor.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,10 +195,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE0E2FB28EAD2F4007A991C /* NetworkService.swift in Sources */,
+				4A8A754828EAFA2400172CF8 /* ErrorResponse.swift in Sources */,
 				4AE0E2DC28EA87F3007A991C /* HomeViewController.swift in Sources */,
 				4AE0E2D828EA87F3007A991C /* AppDelegate.swift in Sources */,
+				4AE0E2FE28EAD729007A991C /* CurrentWeatherResponse.swift in Sources */,
 				4AE0E2DA28EA87F3007A991C /* SceneDelegate.swift in Sources */,
 				4AE0E2F328EAC4FF007A991C /* UIColor+Extensions.swift in Sources */,
+				4AE0E30628EADD99007A991C /* HomeInteractor.swift in Sources */,
+				4AE0E30028EAD731007A991C /* Location.swift in Sources */,
+				4AE0E30428EADD8D007A991C /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
