@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A8A754828EAFA2400172CF8 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A754728EAFA2400172CF8 /* ErrorResponse.swift */; };
+		4A8A754A28EB0A3E00172CF8 /* CLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A754928EB0A3E00172CF8 /* CLabel.swift */; };
 		4AE0E2D828EA87F3007A991C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E2D728EA87F3007A991C /* AppDelegate.swift */; };
 		4AE0E2DA28EA87F3007A991C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E2D928EA87F3007A991C /* SceneDelegate.swift */; };
 		4AE0E2DC28EA87F3007A991C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E2DB28EA87F3007A991C /* HomeViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		4A8A754728EAFA2400172CF8 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		4A8A754928EB0A3E00172CF8 /* CLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLabel.swift; sourceTree = "<group>"; };
 		4AE0E2D428EA87F3007A991C /* Cuaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cuaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE0E2D728EA87F3007A991C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AE0E2D928EA87F3007A991C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				4AE0E2F228EAC4FF007A991C /* UIColor+Extensions.swift */,
+				4A8A754928EB0A3E00172CF8 /* CLabel.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				4AE0E2D828EA87F3007A991C /* AppDelegate.swift in Sources */,
 				4AE0E2FE28EAD729007A991C /* CurrentWeatherResponse.swift in Sources */,
 				4AE0E2DA28EA87F3007A991C /* SceneDelegate.swift in Sources */,
+				4A8A754A28EB0A3E00172CF8 /* CLabel.swift in Sources */,
 				4AE0E2F328EAC4FF007A991C /* UIColor+Extensions.swift in Sources */,
 				4AE0E30628EADD99007A991C /* HomeInteractor.swift in Sources */,
 				4AE0E30028EAD731007A991C /* Location.swift in Sources */,

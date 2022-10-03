@@ -53,11 +53,13 @@ extension HomePresenter: HomePresenterDelegate {
         
         let feels = String(format: "%.1f°C | %.1f°F", feelsC, feelsF)
         
+        let humidity = String(format: "%d%%", humidity)
+        
         delegate?.display(location: location,
                           temperature: temperature,
                           condition: condition,
                           humidityTitle: "HUMIDITY",
-                          humidity: String(humidity),
+                          humidity: humidity,
                           feelsTitle: "FEELS LIKE",
                           feels: feels,
                           uvTitle: "UV INDEX",

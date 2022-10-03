@@ -25,13 +25,72 @@ class HomeViewController: UIViewController {
         return view
     }()
     
-    let errorLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .primaryText
-        label.font = .systemFont(ofSize: 24)
+    let errorLabel: CLabel = {
+        let label = CLabel(size: 24)
         label.numberOfLines = 0
         label.textAlignment = .center
+        return label
+    }()
+    
+    let headerStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        return stackView
+    }()
+    
+    let locationLabel: CLabel = {
+        let label = CLabel(size: 36)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    let temperatureLabel: CLabel = {
+        let label = CLabel(size: 36)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    let conditionLabel: CLabel = {
+        let label = CLabel(size: 24)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    let contentStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        return stackView
+    }()
+    
+    let humidityTitleLabel: CLabel = {
+        let label = CLabel(style: .title)
+        return label
+    }()
+    
+    let humidityLabel: CLabel = {
+        let label = CLabel(style: .content)
+        return label
+    }()
+    
+    let feelsTitleLabel: CLabel = {
+        let label = CLabel(style: .title)
+        return label
+    }()
+    
+    let feelsLabel: CLabel = {
+        let label = CLabel(style: .content)
+        return label
+    }()
+    
+    let uvTitleLabel: CLabel = {
+        let label = CLabel(style: .title)
+        return label
+    }()
+    
+    let uvLabel: CLabel = {
+        let label = CLabel(style: .content)
         return label
     }()
     
@@ -61,6 +120,19 @@ class HomeViewController: UIViewController {
         view.addSubview(loadingView)
         view.addSubview(errorLabel)
         view.addSubview(searchBar)
+        view.addSubview(headerStackView)
+        view.addSubview(contentStackView)
+        
+        headerStackView.addArrangedSubview(locationLabel)
+        headerStackView.addArrangedSubview(temperatureLabel)
+        headerStackView.addArrangedSubview(conditionLabel)
+        
+        contentStackView.addArrangedSubview(humidityTitleLabel)
+        contentStackView.addArrangedSubview(humidityLabel)
+        contentStackView.addArrangedSubview(feelsTitleLabel)
+        contentStackView.addArrangedSubview(feelsLabel)
+        contentStackView.addArrangedSubview(uvTitleLabel)
+        contentStackView.addArrangedSubview(uvLabel)
         
         bottomConstraint = searchBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         
@@ -73,6 +145,15 @@ class HomeViewController: UIViewController {
             errorLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             
             loadingView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
+            headerStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            headerStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            headerStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            
+            contentStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            contentStackView.topAnchor.constraint(equalTo: headerStackView.bottomAnchor, constant: 20),
+            contentStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            contentStackView.bottomAnchor.constraint(lessThanOrEqualTo: searchBar.topAnchor, constant: -10),
             
             searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -167,6 +248,9 @@ extension HomeViewController: HomeDelegate {
         loadingView.startAnimating()
         
         errorLabel.isHidden = true
+        
+        headerStackView.isHidden = true
+        contentStackView.isHidden = true
     }
     
     func display(errorMessage: String) {
@@ -174,6 +258,9 @@ extension HomeViewController: HomeDelegate {
         
         errorLabel.isHidden = false
         errorLabel.text = errorMessage
+        
+        headerStackView.isHidden = true
+        contentStackView.isHidden = true
     }
     
     func display(location: String,
@@ -188,5 +275,18 @@ extension HomeViewController: HomeDelegate {
         loadingView.stopAnimating()
         
         errorLabel.isHidden = true
+        
+        headerStackView.isHidden = false
+        contentStackView.isHidden = false
+        
+        locationLabel.text = location
+        temperatureLabel.text = temperature
+        conditionLabel.text = condition
+        humidityTitleLabel.text = humidityTitle
+        humidityLabel.text = humidity
+        feelsTitleLabel.text = feelsTitle
+        feelsLabel.text = feels
+        uvTitleLabel.text = uvTitle
+        uvLabel.text = uv
     }
 }
