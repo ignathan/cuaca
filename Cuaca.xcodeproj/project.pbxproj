@@ -12,6 +12,7 @@
 		4AE0E2DC28EA87F3007A991C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E2DB28EA87F3007A991C /* HomeViewController.swift */; };
 		4AE0E2E128EA87F7007A991C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AE0E2E028EA87F7007A991C /* Assets.xcassets */; };
 		4AE0E2E428EA87F7007A991C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE0E2E228EA87F7007A991C /* LaunchScreen.storyboard */; };
+		4AE0E2F028EAC05E007A991C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4AE0E2EF28EAC05E007A991C /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE0E2F028EAC05E007A991C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +83,7 @@
 			);
 			name = Cuaca;
 			packageProductDependencies = (
+				4AE0E2EF28EAC05E007A991C /* Alamofire */,
 			);
 			productName = Cuaca;
 			productReference = 4AE0E2D428EA87F3007A991C /* Cuaca.app */;
@@ -111,6 +114,7 @@
 			);
 			mainGroup = 4AE0E2CB28EA87F3007A991C;
 			packageReferences = (
+				4AE0E2EE28EAC05E007A991C /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 4AE0E2D528EA87F3007A991C /* Products */;
 			projectDirPath = "";
@@ -350,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4AE0E2EE28EAC05E007A991C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4AE0E2EF28EAC05E007A991C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4AE0E2EE28EAC05E007A991C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4AE0E2CC28EA87F3007A991C /* Project object */;
 }
